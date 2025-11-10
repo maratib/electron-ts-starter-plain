@@ -1,0 +1,25 @@
+{
+  "name": "electron-ts-starter-plain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "mac": {
+      "extendInfo": {
+        "NSCameraUseContinuityCameraDeviceType": [],
+        "NSMicrophoneUsageDescription": "Records system audio and microphone"
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "electron": "^39.1.1",
+    "typescript": "^5.9.3"
+  }
+}

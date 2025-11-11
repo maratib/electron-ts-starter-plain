@@ -2,24 +2,45 @@
   "name": "electron-ts-starter-plain",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dist": "npm run build && electron-builder",
+    "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true npm run build && electron .",
+    "dev": "ELECTRON_DISABLE_SECURITY_WARNINGS=true npm run build:watch & electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "build": {
+    "appId": "com.abc.desktop",
+    "productName": "Abc",
     "mac": {
-      "extendInfo": {
-        "NSCameraUseContinuityCameraDeviceType": [],
-        "NSMicrophoneUsageDescription": "Records system audio and microphone"
-      }
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.png",
+      "hardenedRuntime": true,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "extendInfo": "build/Info.plist",
+      "target": [
+        "default"
+      ]
+    },
+    "files": [
+      "dist/**/*",
+      "build/**/*"
+    ],
+    "directories": {
+      "output": "release"
     }
   },
   "devDependencies": {
     "@types/node": "^24.10.0",
+    "concurrently": "^9.2.1",
     "electron": "^39.1.1",
-    "typescript": "^5.9.3"
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.9.3",
+    "wait-on": "^9.0.3"
   }
 }

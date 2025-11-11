@@ -1,0 +1,30 @@
+$color_1: #333;
+$color_2: white;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$background-color: green;
+$background-color_2: #007acc;
+$background-color_3: #005a9e;
+$background-color_4: #fafafa;
+$background-color_5: #e8f4f8;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  border: 2px dashed rgba(245, 244, 244, 0.7);
+  background-color: transparent;
+  border-radius: 8px;
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,1 +1,27 @@
-yarn add -D @types/node electron typescript
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <title>Electron TypeScript App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/assets/css/styles.css?sdfdd" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tool Bar  -->
+      <div class="controls">
+        <div id="statusInfo">&nbsp;</div>
+        <button id="exitButton">X</button>
+      </div>
+    </div>
+
+    <script src="dist/renderer.js"></script>
+  </body>
+</html>

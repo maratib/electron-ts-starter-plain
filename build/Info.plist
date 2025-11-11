@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!-- Suppress Continuity Camera warning -->
+        <key>NSCameraUseContinuityCameraDeviceType</key>
+        <array />
+
+        <!-- Also good to add microphone permission -->
+        <key>NSCameraUsageDescription</key>
+        <string>This app needs camera access to capture property media.</string>
+
+        <key>NSMicrophoneUsageDescription</key>
+        <string>This app records system audio and your microphone using BlackHole.</string>
+        <key>NSAppleEventsUsageDescription</key>
+        <string>This app needs AppleEvents access for automation.</string>
+
+    </dict>
+</plist>

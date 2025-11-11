@@ -11,7 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "strictPropertyInitialization": false,
      "paths": {
-          "@/*": ["./src/*"]
+          "@/*": ["./src/*"],
         }
   },
   "include": [

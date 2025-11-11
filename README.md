@@ -2,7 +2,7 @@
 
 ### Build release (dmg) :
 
-copy `index.html`, `styles.min.css` to `./dist` folder
+run watch sass
 
 ```bash
 # For distribution

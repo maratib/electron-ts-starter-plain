@@ -3,8 +3,6 @@ import { Const } from "./Const";
 import path from "path";
 
 export class WindowHelper {
-  private readonly startUrl: string = "index.html";
-
   constructor() {
     this.createWindow();
   }
@@ -30,9 +28,11 @@ export class WindowHelper {
     };
 
     Const.mainWindow = new BrowserWindow(windowSettings);
-    Const.mainWindow.loadFile(this.startUrl).catch((err) => {
-      console.error("Failed to load URL:", err);
-    });
+    Const.mainWindow
+      .loadFile(path.join(__dirname, "../index.html"))
+      .catch((err) => {
+        console.error("Failed to load URL:", err);
+      });
 
     Const.mainWindow.webContents.openDevTools();
 

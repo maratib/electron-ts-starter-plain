@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "dist": "npm run build && electron-builder",
+    "dist": "npm run build && cp ./src/index.html ./src/styles.min.css ./dist && electron-builder --publish never",
     "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true npm run build && electron .",
     "dev": "ELECTRON_DISABLE_SECURITY_WARNINGS=true npm run build:watch & electron ."
   },
